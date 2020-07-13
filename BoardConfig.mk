@@ -3,8 +3,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-BOARD_VENDOR := motorola
-
 DEVICE_PATH := device/motorola/tundra
 
 # A/B
