@@ -296,6 +296,24 @@ $(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,fal
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
+# Logging
+SPAMMY_LOG_TAGS := \
+    MiClstc \
+    MiStcImpl \
+    SDM \
+    SRE \
+    android.hardware.power-service-qti \
+    libsensor-boledalgo \
+    libsensor-parseRGB \
+    libsensor-qshcalapi \
+    sensors \
+    vendor.qti.hardware.display.composer-service
+
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+PRODUCT_VENDOR_PROPERTIES += \
+    $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=E)
+endif
+
 # Media
 PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor \
