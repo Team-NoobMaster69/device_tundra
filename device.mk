@@ -94,19 +94,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
 
-# Boot control
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.1-impl-qti \
-    android.hardware.boot@1.1-impl-qti.recovery \
-    android.hardware.boot@1.1-service \
-    bootctrl.lahaina \
-    bootctrl.lahaina.recovery
-
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
-
 # Call the proprietary setup
 $(call inherit-product, vendor/motorola/tundra/tundra-vendor.mk)
+
+# Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot-service.qti \
+    android.hardware.boot-service.qti.recovery
 
 # Camera
 PRODUCT_PACKAGES += \
