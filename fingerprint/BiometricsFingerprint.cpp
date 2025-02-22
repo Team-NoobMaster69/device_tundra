@@ -47,11 +47,10 @@ void setFodHbm(bool status) {
 void BiometricsFingerprint::disableHighBrightFod() {
     std::lock_guard<std::mutex> lock(mSetHbmFodMutex);
 
-    if (!hbmFodEnabled)
-        return;
+    if (!hbmFodEnabled) return;
 
     mMotoFingerprint->sendFodEvent(NOTIFY_FINGER_UP, {},
-                                   [](IMotFodEventResult, const hidl_vec<signed char> &) {});
+                                   [](IMotFodEventResult, const hidl_vec<signed char>&) {});
     setFodHbm(false);
 
     hbmFodEnabled = false;
@@ -60,12 +59,11 @@ void BiometricsFingerprint::disableHighBrightFod() {
 void BiometricsFingerprint::enableHighBrightFod() {
     std::lock_guard<std::mutex> lock(mSetHbmFodMutex);
 
-    if (hbmFodEnabled)
-        return;
+    if (hbmFodEnabled) return;
 
     setFodHbm(true);
     mMotoFingerprint->sendFodEvent(NOTIFY_FINGER_DOWN, {},
-                                   [](IMotFodEventResult, const hidl_vec<signed char> &) {});
+                                   [](IMotFodEventResult, const hidl_vec<signed char>&) {});
 
     hbmFodEnabled = true;
 }
@@ -78,7 +76,7 @@ BiometricsFingerprint::BiometricsFingerprint() {
 }
 
 Return<uint64_t> BiometricsFingerprint::setNotify(
-    const sp<IBiometricsFingerprintClientCallback> &clientCallback) {
+        const sp<IBiometricsFingerprintClientCallback>& clientCallback) {
     return biometrics_2_1_service->setNotify(clientCallback);
 }
 
@@ -86,7 +84,7 @@ Return<uint64_t> BiometricsFingerprint::preEnroll() {
     return biometrics_2_1_service->preEnroll();
 }
 
-Return<RequestStatus> BiometricsFingerprint::enroll(const hidl_array<uint8_t, 69> &hat,
+Return<RequestStatus> BiometricsFingerprint::enroll(const hidl_array<uint8_t, 69>& hat,
                                                     uint32_t gid, uint32_t timeoutSec) {
     return biometrics_2_1_service->enroll(hat, gid, timeoutSec);
 }
@@ -114,7 +112,7 @@ Return<RequestStatus> BiometricsFingerprint::remove(uint32_t gid, uint32_t fid) 
 }
 
 Return<RequestStatus> BiometricsFingerprint::setActiveGroup(uint32_t gid,
-                                                            const hidl_string &storePath) {
+                                                            const hidl_string& storePath) {
     return biometrics_2_1_service->setActiveGroup(gid, storePath);
 }
 
