@@ -558,3 +558,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.zram.mark_idle_delay_mins=60 \
     ro.zram.first_wb_delay_mins=1440 \
     ro.zram.periodic_wb_delay_hours=24
+
+# Touch HAL
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch-service.motorola
+
+$(call soong_config_set_bool, MOTOROLA_TOUCH, HIGH_TOUCH_POLLING_PATH, /sys/class/touchscreen/primary/interpolation)
