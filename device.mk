@@ -359,6 +359,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
 
+# Moto Camera 4
+TARGET_MOTCAMERA4 := tundra
+TARGET_USES_MOTCAMERA4 := true
+
+$(call inherit-product, vendor/motorola/MotCamera4-lahaina/motcamera4.mk)
+
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
