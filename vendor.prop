@@ -198,6 +198,8 @@ vendor.display.qdcm.mode_combine=2
 vendor.display.use_layer_ext=0
 vendor.display.use_smooth_motion=0
 vendor.gralloc.disable_ubwc=0
+debug.hwui.renderer=skiagl
+debug.hwui.skia_atrace_enabled=false
 
 # IMS
 persist.vendor.ims.cam_sensor_delay=20
