@@ -367,13 +367,12 @@ $(call inherit-product, vendor/motorola/MotCamera4-lahaina/motcamera4.mk)
 
 # NFC
 PRODUCT_PACKAGES += \
+    android.hardware.nfc-service.nxp \
     com.android.nfc_extras \
-    NfcNci \
     SecureElement \
     Tag
-
+    
 PRODUCT_PACKAGES += \
-    android.hardware.nfc-service.nxp \
     android.hardware.secure_element@1.2.vendor \
     libchrome.vendor
 
