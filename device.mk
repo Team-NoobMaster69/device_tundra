@@ -1,6 +1,5 @@
 #
-# Copyright (C) 2023 The AwakenOS Project
-#
+# SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -20,6 +19,13 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
+
+# Display
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
+
+# Display
+TARGET_SCREEN_DENSITY := 400
 
 # Audio
 PRODUCT_PACKAGES += \

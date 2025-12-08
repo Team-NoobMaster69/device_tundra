@@ -1,11 +1,3 @@
-```
-#
-# Copyright (C) 2023 Paranoid Android
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-```
-
 The Motorola Edge 30 Fusion (codenamed _"tundra"_) was announced in September 2022 and is the middle child in the Edge 30 family.
 
 The Motorola Edge 30 Fusion offers a well-rounded mid-range smartphone experience with a high-end design, a bright OLED display, flagship-level performance, and fast charging capabilities.

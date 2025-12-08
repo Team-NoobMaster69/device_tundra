@@ -1,6 +1,5 @@
 #
-# Copyright (C) 2024 Project-Infinity-X
-#
+# SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -53,9 +52,6 @@ TARGET_NO_BOOTLOADER := true
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
-# Display
-TARGET_SCREEN_DENSITY := 400
-
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
 
@@ -70,7 +66,7 @@ LOC_HIDL_VERSION := 4.0
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/configs/hidl/device_framework_matrix.xml \
-    vendor/infinity/config/device_framework_matrix.xml
+    vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
 
@@ -101,8 +97,9 @@ BOARD_KERNEL_CMDLINE := \
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
-TARGET_KERNEL_SOURCE := kernel/motorola/tundra
-TARGET_KERNEL_CONFIG := vendor/tundra-qgki_defconfig
+TARGET_KERNEL_SOURCE := kernel/motorola/sm8350
+TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig
+TARGET_KERNEL_CLANG_VERSION := r522817
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144
@@ -110,7 +107,6 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_SUPER_PARTITION_SIZE := 8925478912
-#BOARD_USERDATAIMAGE_PARTITION_SIZE := 116340535296
 
 BOARD_BUILD_VENDOR_RAMDISK_IMAGE := true
 

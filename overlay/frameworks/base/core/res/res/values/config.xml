@@ -298,7 +298,7 @@
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
     <!-- MMS user agent string -->
-    <string name="config_mms_user_agent" translatable="false">motorolaedge30fusion</string>
+    <string name="config_mms_user_agent" translatable="false">EdgeS30Pro</string>
 
     <!-- MMS user agent profile url -->
     <string name="config_mms_user_agent_profile_url" translatable="false"

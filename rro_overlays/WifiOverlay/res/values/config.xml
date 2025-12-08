@@ -62,5 +62,5 @@
     <bool name="config_wifi_link_probing_supported">true</bool>
 
     <!-- Do not translate. Default access point SSID used for tethering -->
-    <string name="wifi_tether_configure_ssid_default" translatable="false">motorola edge 30 fusion</string>
+    <string name="wifi_tether_configure_ssid_default" translatable="false">Edge S30 Pro</string>
 </resources>
