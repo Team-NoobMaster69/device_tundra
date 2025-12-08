@@ -209,32 +209,22 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-impl-qti \
-    android.hardware.gnss@2.1-service-qti
-
-PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.1-service-qti \
+    gnss@2.0-base.policy \
+    gnss@2.0-xtra-daemon.policy \
     libbatching \
     libgeofencing \
     libgnss \
-    libsensorndkbridge
+    libloc_socket
 
 PRODUCT_PACKAGES += \
-    apdr.conf \
     flp.conf \
     gnss_antenna_info.conf \
     gps.conf \
     izat.conf \
     lowi.conf \
-    sap.conf
-
-PRODUCT_PACKAGES += \
-    gnss@2.0-base.policy \
-    gnss@2.0-xtra-daemon.policy
-
-PRODUCT_PACKAGES += \
-    libcurl.vendor \
-    libjsoncpp.vendor \
-    libsqlite.vendor \
-    libpng.vendor
+    sap.conf \
+    xtwifi.conf
 
 # Graphics
 PRODUCT_COPY_FILES += \
